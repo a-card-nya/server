@@ -6,6 +6,8 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @Entity
@@ -58,5 +60,8 @@ public class Card {
 
     @Column(name = "annual_fee")
     private Integer annualFee;
+
+    @OneToMany(mappedBy = "card", fetch = FetchType.LAZY)
+    private List<CardBenefitTag> cardBenefitTags;
 
 }

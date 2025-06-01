@@ -15,11 +15,11 @@ public class CardBenefitTag {
     @MapsId("cardId")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "card_id", nullable = false)
-    private com.back.server.Card card;
+    private Card card;
 
     @MapsId("tagCode")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "tag_code", nullable = false)
-    private com.back.server.BenefitTag tagCode;
+    private BenefitTag tagCode;
 
 }
