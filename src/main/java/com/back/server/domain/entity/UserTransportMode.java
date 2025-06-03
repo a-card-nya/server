@@ -15,6 +15,17 @@ public class UserTransportMode {
     @MapsId("userId")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id", nullable = false)
-    private com.back.server.User user;
+    private User user;
 
+    @Column(name = "mode", insertable = false, updatable = false)
+    private String mode;
+
+    public UserTransportMode() {
+
+    }
+
+    public UserTransportMode(User user, String mode) {
+        this.user = user;
+        this.id = new UserTransportModeId(user.getId(), mode);
+    }
 }

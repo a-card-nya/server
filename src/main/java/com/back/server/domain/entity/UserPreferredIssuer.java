@@ -15,11 +15,19 @@ public class UserPreferredIssuer {
     @MapsId("userId")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id", nullable = false)
-    private com.back.server.User user;
+    private User user;
 
     @MapsId("issuerCode")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "issuer_code", nullable = false)
-    private com.back.server.CardIssuer issuerCode;
+    private CardIssuer issuerCode;
 
+    public UserPreferredIssuer() {
+
+    }
+
+    public UserPreferredIssuer(User user, String issuerCode) {
+        this.user = user;
+        this.id = new UserPreferredIssuerId(user.getId(), issuerCode);
+    }
 }

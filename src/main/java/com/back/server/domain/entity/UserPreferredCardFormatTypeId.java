@@ -24,6 +24,15 @@ public class UserPreferredCardFormatTypeId implements java.io.Serializable {
     @Column(name = "card_format", nullable = false, length = 50)
     private String cardFormat;
 
+    public UserPreferredCardFormatTypeId() {
+
+    }
+
+    public UserPreferredCardFormatTypeId(Long userId, String cardFormat) {
+        this.userId = userId;
+        this.cardFormat = cardFormat;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

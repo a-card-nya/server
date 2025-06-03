@@ -24,6 +24,14 @@ public class UserBenefitTagId implements java.io.Serializable {
     @Column(name = "tag_code", nullable = false, length = 50)
     private String tagCode;
 
+    public UserBenefitTagId() {
+    }
+
+    public UserBenefitTagId(Long userId, String tagCode) {
+        this.userId = userId;
+        this.tagCode = tagCode;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -24,6 +24,15 @@ public class UserTransportModeId implements java.io.Serializable {
     @Column(name = "mode", nullable = false, length = 50)
     private String mode;
 
+    public UserTransportModeId() {
+
+    }
+
+    public UserTransportModeId(Long userId, String mode) {
+        this.userId = userId;
+        this.mode = mode;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

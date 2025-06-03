@@ -24,6 +24,15 @@ public class UserPreferredIssuerId implements java.io.Serializable {
     @Column(name = "issuer_code", nullable = false, length = 50)
     private String issuerCode;
 
+    public UserPreferredIssuerId() {
+
+    }
+
+    public UserPreferredIssuerId(Long userId, String issuerCode) {
+        this.userId = userId;
+        this.issuerCode = issuerCode;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

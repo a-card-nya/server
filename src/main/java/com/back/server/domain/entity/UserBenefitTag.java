@@ -15,11 +15,18 @@ public class UserBenefitTag {
     @MapsId("userId")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id", nullable = false)
-    private com.back.server.User user;
+    private User user;
 
     @MapsId("tagCode")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "tag_code", nullable = false)
-    private com.back.server.BenefitTag tagCode;
+    private BenefitTag tagCode;
 
+    public UserBenefitTag() {
+    }
+
+    public UserBenefitTag(User user, String tagCode) {
+        this.user = user;
+        this.id = new UserBenefitTagId(user.getId(), tagCode);
+    }
 }

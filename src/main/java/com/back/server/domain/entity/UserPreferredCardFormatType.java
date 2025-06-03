@@ -15,11 +15,18 @@ public class UserPreferredCardFormatType {
     @MapsId("userId")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id", nullable = false)
-    private com.back.server.User user;
+    private User user;
 
     @MapsId("cardFormat")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "card_format", nullable = false)
-    private com.back.server.CardFormatType cardFormat;
+    private CardFormatType cardFormat;
 
+    public UserPreferredCardFormatType() {
+    }
+
+    public UserPreferredCardFormatType(User user, String cardFormat) {
+        this.user = user;
+        this.id = new UserPreferredCardFormatTypeId(user.getId(), cardFormat);
+    }
 }
