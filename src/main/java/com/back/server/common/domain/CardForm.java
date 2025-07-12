@@ -1,4 +1,4 @@
-package com.back.server.common.jpa.domain;
+package com.back.server.common.domain;
 
 public enum CardForm {
     MOBILE("모바일"),

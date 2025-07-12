@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://[AWS RDS 엔드포인트]:3306/[DB명]?useSSL=false&serverTimezone=UTC&characterEncoding=UTF-8
+    username: [RDS 사용자명]
+    password: [RDS 비밀번호]
+  jpa:
+    hibernate:
+      ddl-auto: validate # 데이터베이스 스키마 검증
+    show-sql: false # SQL 쿼리 출력 비활성화

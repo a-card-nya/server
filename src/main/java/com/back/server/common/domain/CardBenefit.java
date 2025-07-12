@@ -1,4 +1,4 @@
-package com.back.server.common.jpa.domain;
+package com.back.server.common.domain;
 
 public enum CardBenefit {
     TRANSPORT("교통"),

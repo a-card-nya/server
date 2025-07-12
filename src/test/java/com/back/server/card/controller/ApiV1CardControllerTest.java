@@ -7,11 +7,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 @SpringBootTest
 @Transactional
-public class ApiV1CardController {
+public class ApiV1CardControllerTest {
 
     @Test
-    @DisplayName("모든 카드 조회")
-    public void getAllCardsTest() {
+    @DisplayName("모든 카드 조회 테스트")
+    public void getAllCards() {
         // Given
         // (테스트에 필요한 데이터 준비)
 

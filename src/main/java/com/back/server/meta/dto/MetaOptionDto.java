@@ -1,4 +1,6 @@
 package com.back.server.meta.dto;
 
-public class MetaOptionDto {
-}
+public record MetaOptionDto(
+        String code,
+        String label
+) {}

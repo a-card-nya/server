@@ -1,4 +1,4 @@
-package com.back.server.common.jpa.domain;
+package com.back.server.common.domain;
 
 public enum SocialGroup {
     LOW_INCOME("저소득층"),

@@ -1,19 +1,21 @@
-package com.back.server.recommendation;
+package com.back.server.recommendation.dto;
+
+import com.back.server.common.domain.*;
 
 import java.util.List;
 
 public record RecommendationRequestDto(
-        String ageGroup,
-        String region,
+        AgeGroup ageGroup,
+        Region region,
         Boolean useClimateLine,
         Boolean useBusanVoucher,
-        List<String> mainTransport,
+        List<TransportType> mainTransport,
         Integer averageRidesPerWeek,
-        List<String> preferredCardCompanies,
-        List<String> preferredCardTypes,
+        List<CardCompany> preferredCardCompanies,
+        List<CardType> preferredCardTypes,
         Integer annualFeeLimit,
-        String preferredPaymentMethod,
-        String preferredCardForm,
-        List<String> preferredBenefits,
-        String socialGroup
+        CardPaymentMethod preferredCardPaymentMethod,
+        CardForm preferredCardForm,
+        List<CardBenefit> preferredCardBenefits,
+        SocialGroup socialGroup
 ) {}

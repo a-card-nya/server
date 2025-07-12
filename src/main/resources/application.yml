@@ -1,1 +1,22 @@
-spring.application.name=server
+spring:
+  application:
+    name: server
+    profiles:
+      active: dev
+    output:
+      ansi:
+        enabled: always
+    jpa:
+      show-sql: true
+      properties:
+        hibernate:
+          format_sql: true
+          highlight_sql: true
+          use_sql_comments: true
+    springdoc:
+      default-produces-media-type: application/json;charset=UTF-8
+    logging:
+      level:
+        org.hibernate.orm.jdbc.bind: TRACE
+        org.hibernate.orm.jdbc.extract: TRACE
+        org.springframework.transaction.interceptor: TRACE
