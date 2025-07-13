@@ -1,6 +1,6 @@
 package com.back.server.recommendation.dto;
 
-import com.back.server.common.domain.*;
+import com.back.server.meta.domain.*;
 
 import java.util.List;
 

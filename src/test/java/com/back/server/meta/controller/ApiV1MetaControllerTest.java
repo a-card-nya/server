@@ -1,6 +1,6 @@
 package com.back.server.meta.controller;
 
-import com.back.server.common.domain.*;
+import com.back.server.meta.domain.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

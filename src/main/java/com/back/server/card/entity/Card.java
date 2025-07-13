@@ -1,7 +1,7 @@
 package com.back.server.card.entity;
 
-import com.back.server.common.domain.*;
 import com.back.server.common.jpa.entity.BaseEntity;
+import com.back.server.meta.domain.*;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,6 +15,7 @@ import java.util.List;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "card")
 public class Card extends BaseEntity {
 
     @Column(name = "name", nullable = false, length = 20)
@@ -31,6 +32,12 @@ public class Card extends BaseEntity {
     @Enumerated(EnumType.STRING)
     @Column(name = "region", length = 20)
     private Region region;
+
+    @ElementCollection(targetClass = AgeGroup.class)
+    @CollectionTable(name = "card_age_groups", joinColumns = @JoinColumn(name = "card_id"))
+    @Column(name = "age_group", nullable = false, length = 20)
+    @Enumerated(EnumType.STRING)
+    private List<AgeGroup> ageGroups;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "type", nullable = false, length = 20)

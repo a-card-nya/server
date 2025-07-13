@@ -1,4 +1,4 @@
-package com.back.server.common.domain;
+package com.back.server.meta.domain;
 
 public enum Region {
     SEOUL("서울"),

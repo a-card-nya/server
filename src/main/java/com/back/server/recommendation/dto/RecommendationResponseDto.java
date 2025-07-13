@@ -1,8 +1,9 @@
 package com.back.server.recommendation.dto;
 
-import com.back.server.card.dto.CardResponseDto;
-import com.back.server.common.domain.AgeGroup;
-import com.back.server.common.domain.Region;
+import com.back.server.meta.domain.AgeGroup;
+import com.back.server.meta.domain.Region;
+import com.back.server.recommendation.entity.Recommendation;
+import com.back.server.recommendation.entity.RecommendedCard;
 
 import java.util.List;
 
@@ -13,9 +14,13 @@ public record RecommendationResponseDto(
         Integer averageMonthlySpending,
         List<RecommendedCard> recommendedCards
 ) {
-    record RecommendedCard(
-            CardResponseDto card,
-            Double score,
-            Integer estimatedMonthlySpending
-    ) {}
+    public RecommendationResponseDto(Recommendation recommendation) {
+        this(
+                recommendation.getId(),
+                recommendation.getRegion(),
+                recommendation.getAgeGroup(),
+                recommendation.getAverageMonthlySpending(),
+                recommendation.getRecommendedCards()
+        );
+    }
 }

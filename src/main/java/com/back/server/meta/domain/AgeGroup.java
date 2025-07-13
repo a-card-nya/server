@@ -1,4 +1,4 @@
-package com.back.server.common.domain;
+package com.back.server.meta.domain;
 
 public enum AgeGroup {
     UNDER_18("만18세 이하"),
