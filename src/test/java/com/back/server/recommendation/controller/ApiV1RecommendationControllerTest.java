@@ -1,13 +1,12 @@
 package com.back.server.recommendation.controller;
 
-import com.back.server.meta.domain.AgeGroup;
-import com.back.server.meta.domain.Region;
-import com.back.server.recommendation.dto.RecommendationRequestDto;
-import com.back.server.recommendation.entity.Recommendation;
-import com.back.server.recommendation.entity.RecommendedCard;
-import com.back.server.recommendation.repository.RecommendationRepository;
-import com.back.server.recommendation.repository.RecommendedCardRepository;
-import com.back.server.recommendation.service.RecommendationService;
+import com.back.server.domain.meta.enums.AgeGroup;
+import com.back.server.domain.meta.enums.Region;
+import com.back.server.domain.recommendation.entity.Recommendation;
+import com.back.server.domain.recommendation.entity.RecommendedCard;
+import com.back.server.domain.recommendation.repository.RecommendationRepository;
+import com.back.server.domain.recommendation.repository.RecommendedCardRepository;
+import com.back.server.domain.recommendation.service.RecommendationService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +19,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
