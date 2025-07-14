@@ -1,4 +1,4 @@
-package com.back.server.recommendation.controller;
+package com.back.server.domain.recommendation.controller;
 
 import com.back.server.domain.meta.enums.AgeGroup;
 import com.back.server.domain.meta.enums.Region;

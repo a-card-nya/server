@@ -1,4 +1,4 @@
-package com.back.server.meta.controller;
+package com.back.server.domain.meta.controller;
 
 import com.back.server.domain.meta.enums.*;
 import org.junit.jupiter.api.DisplayName;

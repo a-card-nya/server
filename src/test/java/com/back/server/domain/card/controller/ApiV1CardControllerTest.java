@@ -1,4 +1,4 @@
-package com.back.server.card.controller;
+package com.back.server.domain.card.controller;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
